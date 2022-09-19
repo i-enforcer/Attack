@@ -39,7 +39,7 @@ class Home:
 	def getproxies(self):
 		#self.styleText("\n [*] Downloading Proxy...\n")
 		file_name = "utils/http.txt"
-		http_proxies = ["https://api.proxyscrape.com/v2/?request=displayproxies&protocol=http&timeout=100000&country=all&ssl=all&anonymity=all"]
+		http_proxies = ["https://api.proxyscrape.com/v2/?request=displayproxies&protocol=http&timeout=1000000&country=all&ssl=all&anonymity=all"]
 		with open(file_name, 'w'):
 			for proxies in http_proxies:
 				if httpx.get(proxies).status_code == 200:
